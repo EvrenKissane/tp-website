@@ -1,0 +1,1073 @@
+*   {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+main {
+    min-height: 100vh;
+    height: auto;
+    background-color: #f5f5f5;
+}
+
+/* hamburger button */
+#hamburger {
+    background-color: #b3b3b3;
+}
+
+.button-one {
+    --button-color: #000000;
+    border: none;
+    border-radius: .25rem;
+    
+    display: none;
+}
+
+.button-one .line {
+    transition: 
+        y 45ms ease-in 45ms,
+        rotate 45ms ease-in,
+        opacity 0ms 45ms;   
+    ;
+    transform-origin: center;
+}
+
+.button-one[aria-expanded = "true"] .line {
+    transition: 
+        y 45ms ease-in,
+        rotate 45ms ease-in 45ms,
+        opacity 0ms 45ms;   
+    ;
+    transform-origin: center;
+}
+
+.button-one[aria-expanded = "true"] :is(.top, .bottom) {
+    y: 45px;
+}
+
+.button-one[aria-expanded = "true"] .top {
+    rotate: 45deg;
+}
+
+.button-one[aria-expanded = "true"] .middle {
+    opacity: 0;
+}
+
+.button-one[aria-expanded = "true"] .bottom {
+    rotate: -45deg;
+}
+
+/* Header */
+
+#header {
+    width: 100%;
+    height: 40px;
+    padding: 0px 16px 0px 16px;
+    background-color: #ffffff;
+    display: grid;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    grid-template-columns: 60px auto 30px;
+    border-bottom: #000000 solid 1px;
+}
+
+#header button {
+    height: 55px;
+    width: 55px;
+}
+
+.desktop-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.desktop-nav a {
+    text-decoration: none;  
+    padding-bottom: 4px;
+    margin: 0px 32px 0px 0px;
+}
+
+#header a {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: transform 0.2s;
+}
+
+#header a:active {
+    transform: scale(0.95);
+}
+
+/* Logo */
+#logo-div {
+    max-height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+#logo {
+    max-height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+}
+
+.logo-img {
+    height: 30px;
+    width: 30px;
+    grid-column: 1;
+}
+
+/* Mobile nav*/
+.mobile-nav {
+    display: block;
+    position: fixed;
+    top: 87px;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 98;
+    background-color: #f5f5f5;
+    padding-top: 120px;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a{
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 32px;
+    border-radius: .25rem;
+    user-select: none;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: Helvetica, Arial, sans-serif;
+    border: #000000 solid 1px;
+}
+
+.mobile-nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* main */
+
+/* Section 1*/
+
+#welcome {
+    padding: 123px 0px 16px 0px;
+    background-color: #F5F5F5;
+    height: 55vh;
+    max-height: 600px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#welcome-top {
+
+}
+
+#welcome-bottom {
+    
+}
+
+#welcome h2 {
+    color: #333;
+    background-color: #f5f5f5;
+    text-align: left;
+    padding: 8px 16px 8px 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#welcome-p {
+    color: #333;
+    background-color: #f5f5f5;
+    text-align: left;
+    padding: 16px 32px 16px 32px;
+    margin: auto;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Button*/
+
+.click-consultation:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+.click-consultation:active {
+    transform: scale(0.95); /* Slightly smaller on press */
+}
+
+.click-consultation {
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 8px 16px 8px 16px;
+    border-radius: 2rem;
+    transition: background-color 0.5s ease;
+    margin-top: 8vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: background-color .3s, color .3s, transform 0.2s;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Section 3*/
+
+#deal {
+    padding: 32px;
+    max-height: 600px;
+    background-color: #F5F5F5;
+    padding: 16px;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 25vh;
+}
+
+.deal-text {
+    color: #000000;
+    background-color: #F5F5F5;
+    text-align: left;
+    padding: 16px 32px 16px 32px;    
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#deal h2 {
+    color: #000000;
+    background-color: transparent;
+    text-align: left;
+    padding: 8px 16px 8px 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 749.9px) {
+    #welcome {
+        margin-bottom: 15vh;
+    }
+    
+    #showcase {
+        background-color: transparent;    
+        height: 80vh;
+        padding: 32px 8px 0px 8px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 25vh;
+    }
+    
+
+    
+    #wrapper {
+        height: calc(50vh + 40vw);
+        max-height: 600px;
+        width: auto;
+        max-width: 500px;
+        display: flex; /* This will arrange your items in a row */
+        overflow-x: auto; /* This will enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* This will make the scrolling snap to each item */
+        -webkit-overflow-scrolling: touch; /* Optional: This will make the scrolling smooth */
+        margin: auto;
+        background-color: transparent;        
+    }
+    
+    .item {
+        display: block;
+        min-width: 90%;
+        height: 100%;
+        max-height: 300px;
+        max-width: 500px;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: transparent;
+        scroll-snap-align: center; /* This will align the start of the item with the start of the viewport */
+    }
+    
+    #wrapper::-webkit-scrollbar {
+        display: none; /* This will hide the scrollbar */
+    }
+    
+    #wrapper img {
+        height: auto;
+        max-height: 350px;
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+        border-radius: .25rem;
+        position: relative;
+    }
+    
+    #wrapper p  {
+    }
+    
+    #scroll-bars {
+        top: auto;
+    }
+    
+    .showcase-text {
+        padding: 0% 5% 0% 5%;
+        background-color: transparent;    
+        position: relative;
+    }
+    
+    .circle {
+        display: none;
+      }
+    
+      
+    #wrapper h2 {
+        color: #000000;
+        text-align: left;
+        padding-top: 19px;
+        text-decoration: none;
+        font-family: Helvetica, Arial, sans-serif;
+        background-color: transparent;    
+    }
+    
+    .showcase-text p {
+        color: #000000;
+        text-align: left;
+        padding: 0px;
+        width: 100%;
+        margin-top: 6px;
+        font-family: Helvetica, Arial, sans-serif;
+        background-color: transparent;
+    }
+
+    .showcase-text p::before {
+        content: ""; /* This is necessary for the pseudo-element to show */
+        position: absolute; 
+        left: 0px; /* Adjust as needed */
+        top: 29px;
+        transform: translateY(-50%); /* This centers the circle vertically */
+        width: 10px;
+        height: 10px;
+        background: #000000;
+        border-radius: 50%; /* This makes the pseudo-element a circle */
+    }
+    
+    #what-we-do {
+    
+    }
+    
+    #who-we-serve {
+    
+    }
+    
+    #our-priorities {
+    
+    }
+    
+    #scroll-bars {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        align-content: space-between;
+        background-color: #f5f5f5;position: relative;
+    }
+    
+    #scroll-bars .bars {
+        
+        height: 2px;
+        width: 68px;
+        background-color: #b3b3b3;
+        margin: 16px 8px 8px 8px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #scroll-bars .bars.active {
+        height: 2px;
+        width: 70px;
+        background-color: #000000;
+        margin: 16px 8px 8px 8px;
+        border: none;
+    }
+
+    .rectangle {
+        margin-top: -10px;
+        display: flex;
+        align-items: center;
+        width: 70px;
+        height: 20px;
+        background:transparent;
+    }
+
+    .scroll-bars-click {
+        display: none;
+    }
+
+    #deal {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 0px) {
+    
+    /* text */
+    .desktop-nav {
+        height: 40px;
+    }
+
+    .desktop-nav a {
+        margin: 0px 8px 2px 8px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #logo-div {
+        height: 30px;
+    }
+
+    #header a {
+        font-size: 20px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    
+    #welcome {
+        height: 60vh;
+        max-height: 600px;
+        margin-bottom: 15vh;
+        line-height: 40px;
+    }
+
+    #welcome-top h2 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    
+    #welcome-p {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #showcase h2 {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #showcase p {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 40px;
+    }
+
+    #showcase .showcase-text h2 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #wrapper {
+        border-radius: .5rem;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #deal h2 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #deal p {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 40px;
+    }
+
+    .click-consultation {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #footer p {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #footer a {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #footer-top .footer-title {
+        font-size: 12px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #footer-bottom p {
+        font-size: 12px;
+        font-weight: 500;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+
+}
+
+@media screen and (min-width:426px) {
+    .desktop-nav a {
+        margin: 0px 16px 0px 8px;
+    }
+
+    #header a {
+        font-size: 24px;
+    }
+
+    #welcome h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    #welcome p {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #showcase h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #showcase p {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #showcase .showcase-text h2 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #deal h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #deal p {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .click-consultation {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #footer-top p {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #footer-top a {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #footer-top .footer-title {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    #footer-bottom p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 749.9px){    
+    /* Header */
+    .desktop-nav a {
+        margin: 0px 32px 0px 0px;
+    }
+    
+    /* Section 1 */
+    #welcome {
+        max-width: 600px;
+        padding-top: 15vh;
+    }
+
+    /* Section 2 */
+    
+    #showcase {
+        width: 95vw;
+        max-width: 900px;
+        overflow: hidden;
+        min-height: 60vh;
+        max-height: 600px;
+        margin: auto;
+    }
+
+    #showcase .item {
+        position: relative;
+        width: 95vw;
+        max-width: 900px;
+        min-height: 60vh;
+        max-height: 600px;
+        animation: fadeIn 0.5s ease-in-out;
+    } 
+    
+    #showcase .item img {
+        width: 95vw;
+        max-width: 900px;
+        max-height: 90vh;
+        display: block;
+        border-radius: .5rem;
+    }
+    
+    #showcase .item .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95%;
+        color: #fff; /* Adjust the text color as needed */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        gap: calc(20vw + 0vh);
+        align-items: left;
+        text-align: left;
+    }    
+
+    .showcase-text {
+        position: relative;
+        top: 0;
+        width: 73%;
+        height: auto;
+        max-width: 800px;
+    }
+
+    .showcase-text h2 {
+        display: flex;
+        padding-left: 5%;
+        align-items: center;
+    }
+
+    .showcase-text p {
+        display: flex;
+        padding-left: 5%;
+        margin-bottom: 10px;
+    }
+
+
+    .showcase-text p::before {
+        content: ""; /* This is necessary for the pseudo-element to show */
+        position: absolute; 
+        left: 20px; /* Adjust as needed */
+        top: 20px;
+        transform: translateY(-50%); /* This centers the circle vertically */
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-radius: 50%; /* This makes the pseudo-element a circle */
+    }
+    
+    .showcase-text {
+        background-color: rgba(0, 0, 0, .7);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 2rem;
+    }
+    
+    .scroll-bars-click {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 610px;
+        margin-top: 20px;
+    }
+
+    .scroll-bars-click .bars-2:active {
+        transform: scale(0.95); /* Slightly smaller on press */
+    }
+
+    .scroll-bars-click .bars-2::before {
+        content: ""; /* This is necessary for the pseudo-element to show */
+        position: absolute;
+        left: 20px; /* Adjust as needed */
+        top: 50%;
+        transform: translateY(-50%); /* This centers the circle vertically */
+        width: 10px;
+        height: 10px;
+        background: #000000;
+        border-radius: 50%; /* This makes the pseudo-element a circle */
+    }
+    
+    .scroll-bars-click .bars-2 {
+        position: relative;
+        background-color: rgba(255, 255, 255, .7);
+        color: #000;
+        border: none;
+        padding: 8px 16px 8px 40px;
+        cursor: pointer;
+        border-radius: 2rem;
+        transition: background-color .3s;
+    }
+    
+    .scroll-bars-click .bars-2:hover {
+        background-color: rgba(255, 255, 255, .9);
+    }
+    
+    .highlight {
+        position: relative;
+        background-color: rgba(0, 0, 0, .9) !important;
+        color: #fff !important;
+        border: none;
+        padding: 8px 16px 8px 16px !important;
+        cursor: pointer;
+        border-radius: 2rem;
+        transition: background-color .3s;
+    }
+
+    .highlight::before {
+        display: none;
+    }
+
+
+    #scroll-bars {
+        display: none;
+    }
+    
+
+    /* Section 3 */
+    #deal {
+        max-width: 600px;
+        max-height: 600px;
+        margin-top: 250px;
+    }
+
+    /* Footer */
+    #footer-top {
+        max-width: 650px;
+        margin: auto;
+    }
+
+    /* text */
+    #header a {
+        font-size: 24px;
+    }
+
+    #welcome h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    #welcome p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    #showcase h2 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #showcase .showcase-text h2 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #showcase p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    button .bars-2 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    #deal h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    #deal p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .click-consultation {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #footer-top p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    #footer-top a {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    #footer-top .footer-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    #footer-bottom p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {    
+    /* Header */
+    .desktop-nav a {
+        margin: 0px 32px 0px 0px;
+    }
+    
+    /* Section 1 */
+    #welcome {
+        max-width: 800px;
+        padding-top: 15vh;
+    }
+
+    /* Section 2 */
+    #wrapper {
+        height: 100vh;
+        height: 1000px;
+    }
+
+    /* Section 3 */
+    #deal {
+        max-width: 800px;
+        max-height: 800px;
+    }
+
+    /* Footer */
+    #footer-top {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* text */
+    #header a {
+        font-size: 24px;
+    }
+
+    #welcome h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    #welcome p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    #showcase h2 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #showcase .showcase-text h2 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #showcase p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    #deal h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    #deal p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .click-consultation {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #footer-top p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    #footer-top a {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    #footer-top .footer-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    #footer-bottom p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+}
+
+/* Footer */
+#footer {
+    background-color: #ffffff;
+    height: 350px;
+}
+
+#footer-top {
+    padding: 16px 16p 16px 16px;
+    height: 150px;
+    line-height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 300px;
+    width: auto;
+}
+
+#footer-top .footer-title {
+    margin-top: 0;
+}
+
+#footer-links {
+    margin-bottom: 32px;
+    background-color: #ffffff;
+    grid-column: 2;
+    padding-right: 16px;
+}
+
+#footer-contact {
+    background-color: #ffffff;
+}
+
+.underline {
+    position : relative;
+    color : black ;
+    display : inline-block;
+  }
+.underline::after {
+    content : "";
+    position : absolute;
+    width : 100%;
+    height : 1px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transform : scaleX(0);
+    transform-origin: bottom right;
+    transition : transform 0.25s linear;
+}
+
+.underline:hover::after {
+    transform-origin: bottom left;
+      transform: scaleX(1);
+}
+
+#footer-bottom {
+    display: grid; 
+    grid-template-columns: 30px 1fr;
+    background-color: #ffffff;
+    width: auto;
+    padding: 0px 16px 4px 16px;
+}
+#footer-bottom p {
+    grid-column: 2;
+    width: auto;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 5px 0px 5px 0px;
+    text-align: right;
+    align-self: end;
+}
+.footer-title {
+    font-size: 12px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#footer-top a {
+    color: #000000;
+    display: block;
+    background-color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    width: fit-content;
+    transition: transform 0.2s;
+}
+
+#footer a:active {
+    transform: scale(0.95);
+}
+
+#footer-top p {
+    color: #000000;
+    display: block;
+    background-color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#footer-contact {
+    padding-left: 16px;
+}
+
+#footer p {
+    color: #000000;
+    display: block;
+    background-color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+}
